@@ -1,0 +1,23 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+use_frameworks!
+
+target 'Logan' do
+
+  pod 'Socket.IO-Client-Swift', '~> 8'
+  pod 'Alamofire'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'NVActivityIndicatorView'
+  pod 'SwiftMessages'
+  pod 'PopupController'
+  pod 'IBAnimatable'
+  pod 'IQKeyboardManagerSwift'
+  pod 'SnapKit'
+  pod 'Hero'
+  pod 'PopupController'
+  pod 'Kingfisher'
+  pod 'EVReflection'
+  pod 'LetterAvatarKit'
+  
+end

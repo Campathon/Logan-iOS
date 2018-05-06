@@ -1,0 +1,56 @@
+PODS:
+  - Alamofire (4.7.2)
+  - EVReflection (5.6.0):
+    - EVReflection/Core (= 5.6.0)
+  - EVReflection/Core (5.6.0)
+  - Hero (1.2.0)
+  - IBAnimatable (5.0.0)
+  - IQKeyboardManagerSwift (6.0.0)
+  - Kingfisher (4.7.0)
+  - LetterAvatarKit (1.1.2)
+  - NVActivityIndicatorView (4.2.0):
+    - NVActivityIndicatorView/Presenter (= 4.2.0)
+  - NVActivityIndicatorView/Presenter (4.2.0)
+  - PopupController (0.2.0)
+  - RxCocoa (4.1.2):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.1.2)
+  - SnapKit (4.0.0)
+  - Socket.IO-Client-Swift (8.3.3)
+  - SwiftMessages (4.1.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - EVReflection
+  - Hero
+  - IBAnimatable
+  - IQKeyboardManagerSwift
+  - Kingfisher
+  - LetterAvatarKit
+  - NVActivityIndicatorView
+  - PopupController
+  - RxCocoa
+  - RxSwift
+  - SnapKit
+  - Socket.IO-Client-Swift (~> 8)
+  - SwiftMessages
+
+SPEC CHECKSUMS:
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  EVReflection: 5c9443fd3d9b71eaab8c2321e3a2aca155ac352e
+  Hero: 33dadf2cd1c98af71e213dcbc2902e6e03622a4e
+  IBAnimatable: aa2286a9cf8fb4ae2e1be85c5287ae56143b024f
+  IQKeyboardManagerSwift: 624f128983eec795deacd50c1cd2f72664d13f08
+  Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
+  LetterAvatarKit: 50af51c201d935dd868c7e53db5b7b0ef57297cf
+  NVActivityIndicatorView: 75c9634073e03b31d7e2748cd2417feab1206195
+  PopupController: 0b69fdf11cbeaa807789a8c3992599083640988f
+  RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
+  RxSwift: e49536837d9901277638493ea537394d4b55f570
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  Socket.IO-Client-Swift: a2faffdbde89c63aebc5d631041530c1068b02b8
+  SwiftMessages: d81f48c1f8b6bc1dbebdfffe11226f0344f937ca
+
+PODFILE CHECKSUM: a7c3b74510ac0d0bfea497a2286a2dbe6de17164
+
+COCOAPODS: 1.4.0
