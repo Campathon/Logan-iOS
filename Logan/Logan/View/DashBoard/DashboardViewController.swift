@@ -93,8 +93,10 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
             cell.lblname.text = user.name ?? ""
             cell.imgCard.kf.setImage(with: URL.init(string: user.card?.image ?? ""), placeholder: nil, options: nil, progressBlock: nil, completionHandler: nil)
             cell.lblCard.text = user.card?.name ?? ""
-            if user.status != "active" {
-                cell.alpha = 0.5
+            if user.status == "left" {
+                cell.contentView.alpha = 0.5
+            } else {
+                cell.contentView.alpha = 1
             }
             return cell
         }

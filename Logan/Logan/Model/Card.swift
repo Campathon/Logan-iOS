@@ -18,10 +18,17 @@ class Card: EVObject {
     var name: String?
     var image: String?
     var alias: String?
-//    var description: String?
+    var popular: NSNumber?
+    var _description: String?
     
     var isSelect: Bool = false
     var quantity: Int = 0
+    
+    override func propertyMapping() -> [(keyInObject: String?, keyInResource: String?)] {
+        return [
+            (keyInObject: "_description", keyInResource: "description")
+        ]
+    }
     
 }
 

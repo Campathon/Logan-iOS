@@ -70,9 +70,13 @@ class ChooseCardViewController: UIViewController {
             BannerManager.share.showMessage(withContent: "Chưa đủ số lượng người chơi tối thiểu", theme: BannerManager.BannerTheme.defaultTheme)
             return
         }
-        if Card.cards.filter({ (card) -> Bool in
-            return card.isSelect
-        }).count < Room.curRoom.users.count {
+        var count = 0
+        for card in Card.cards {
+            if card.isSelect {
+                count += card.quantity
+            }
+        }
+        if count < Room.curRoom.users.count {
             BannerManager.share.showMessage(withContent: "Chưa đủ số lượng bài", theme: BannerManager.BannerTheme.defaultTheme)
         } else {
             RequestManager.shared.apiPlayGame { [weak self] (isSuccess) in
@@ -151,6 +155,11 @@ extension ChooseCardViewController: UICollectionViewDelegateFlowLayout, UICollec
                 let user = Room.curRoom.users[indexPath.row]
                 cell.imgAvt.image = UIImage.makeLetterAvatar(withUsername: user.name ?? "NC")
                 cell.lblName.text = user.name ?? ""
+                if user.status == "left" {
+                    cell.alpha = 0.5
+                } else {
+                    cell.alpha = 1
+                }
                 return cell
             }
         } else if collectionView == clCard {

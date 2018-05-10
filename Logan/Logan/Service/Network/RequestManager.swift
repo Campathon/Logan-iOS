@@ -21,6 +21,7 @@ class RequestManager {
         case quitGame = "/rooms/close"
         case play = "/rooms/play"
         case leave = "/rooms/leave"
+        case getUser = "/rooms/users"
     }
     
     // MARK: - instance
@@ -135,4 +136,21 @@ class RequestManager {
         }, animate: true, showErrorMessage: true)
     }
     
+    // Func get User
+    func getUser(id: String, complete:((_ isSuccess: Bool, _ users: [User])->Void)?) {
+        let params: [String: Any] = [
+            "room": id
+        ]
+        let request = ServerRequest(method: .post, encoding: Alamofire.JSONEncoding.default, path: path.getUser.rawValue, parameters: params as [String : AnyObject], datas: nil, responseType: ServerResponse.self)
+        
+        ServiceManager.execute(request, completionHandle: { (isSuccess, response) in
+            print(response)
+            if let dataDict = response?.responseData.value(forKey: "data") as? [NSDictionary] {
+                let userData = [User].init(dictionaryArray: dataDict)
+                complete?(true, userData)
+            } else {
+                complete?(false, [])
+            }
+        }, animate: true, showErrorMessage: true)
+    }
 }
